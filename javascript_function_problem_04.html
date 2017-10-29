@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+	function print_star(n)
+	{
+		var string = "";
+
+		for(var i=1; i<=n; i++)
+		{
+			for(var j=n; j>i; j--)
+				string+=" ";
+
+			for(var k=1; k<=i; k++)
+				string+="*";
+
+			string+='<br>';
+		}
+
+		document.write(string);
+		return string;
+	}
+
+	function exepect(l, r)
+	{
+    		if(l===r)
+        		document.write("pass"+'<br>');
+    		else
+        		document.write("fail"+'<br>');
+	}
+
+	exepect(print_star(1), '*<br>');
+       	exepect(print_star(2), ' *<br>**<br>');
+       	exepect(print_star(3), '  *<br> **<br>***<br>');
+       	exepect(print_star(4), '   *<br>  **<br> ***<br>****<br>');
+       	exepect(print_star(5), '    *<br>   **<br>  ***<br> ****<br>*****<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>
