@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+	function sum(lo, hi)
+	{
+    		var result = 0;
+    
+    		if(lo>=hi)
+        		for(; hi<=lo; hi++)
+            			result+=hi;
+    		else if(lo<=hi)
+        		for(; lo<=hi; lo++)
+            			result+=lo;
+    		else if(lo==hi)
+        		return lo;
+    
+    		return result;
+	}
+
+	function exepect(l, r)
+	{
+    		if(l===r)
+        		document.write("pass"+'<br>');
+    		else
+        		document.write("fail"+'<br>');
+	}
+
+	exepect(sum(1, 1), 3);
+       	exepect(sum(1, 1), 1);
+       	exepect(sum(1, 100), 5050);
+       	exepect(sum(10, 200), 20055);
+       	exepect(sum(200, 1000), 480600);
+       	exepect(sum(100, 1), 5050);
+       	exepect(sum(1000, 200), 480600);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
