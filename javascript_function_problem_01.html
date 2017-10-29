@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+	function cal(stu, javascript, python, java, ruby, swift)
+	{
+		var score = new Array(javascript, python, java, ruby, swift);
+    
+		var average = (javascript+python+java+ruby+swift)/5;
+    
+		var max = score[0];
+		var min = score[0];
+    
+		for(var i=0; i<score.length; i++)
+		{
+        		if(score[i]>max)
+			max = score[i];
+		}
+    
+		for(var i=0; i<score.length; i++)
+		{
+			if(score[i]<min)
+			min = score[i];
+		}
+    
+		return stu+"의 평균 점수는 "+average+", 최고 점수는 "+max+", 최하 점수는 "+min+" 입니다."+'<br>';
+	}
+
+	document.write(cal('A', 30, 50, 80, 40, 70));
+	document.write(cal('B', 100, 70, 60, 20, 80));
+	document.write(cal('C', 90, 90, 90, 70, 65));
+
+    </script>
+</head>
+<body>
+</body>
+</html>
